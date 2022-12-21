@@ -3,7 +3,8 @@ const app = express()
 
 const port = 5000
 
-app.get('/', require('./routes/index'))
+app.use('/', require('./routes/index'))
+app.use('/product', require('./routes/product'))
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
