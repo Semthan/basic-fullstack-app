@@ -14,7 +14,7 @@ const { connection } = mongoose;
 connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
-r
+
 app.use('/', require('./routes/index'))
 app.use('/product', require('./routes/product'))
 
