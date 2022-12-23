@@ -15,6 +15,9 @@ connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use('/', require('./routes/index'))
 app.use('/product', require('./routes/product'))
 
