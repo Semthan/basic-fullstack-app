@@ -8,5 +8,6 @@ router
 
 router
   .put('/:id', productController.updateProduct)
+  .delete('/:id', productController.deleteProduct)
 
 module.exports = router

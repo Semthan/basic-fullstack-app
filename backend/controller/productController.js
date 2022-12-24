@@ -39,3 +39,18 @@ exports.updateProduct = async (req, res) => {
     res.status(500).send
   }
 }
+
+exports.deleteProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id)
+
+    if (!product) {
+      res.status(400).json('Product not found');
+    }
+
+    const deleteProduct = await product.remove()
+    res.status(200).json(deleteProduct)
+  } catch (error) {
+
+  }
+}
