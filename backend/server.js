@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors');
 
 require('dotenv').config()
 
@@ -15,6 +16,15 @@ connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
 
+/* app.use(
+  cors({
+    origin: ['http://localhost:3000',],
+    credentials: true,
+  }),
+); */
+
+//first lets try with this
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
