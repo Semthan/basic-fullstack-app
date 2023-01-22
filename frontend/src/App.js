@@ -1,8 +1,13 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Products } from './Pages/Products';
+
 function App() {
   return (
-    <div className="">
-      <h1>basic fullstack app</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Products />} />
+      </Routes>
+    </Router>
   );
 }
 
