@@ -1,0 +1,12 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  font-size: 4.5rem;
+}
+
+table,th,td{
+  border: 1px solid black;
+}

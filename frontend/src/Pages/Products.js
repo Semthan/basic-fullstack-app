@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import ProductCard from "../Components/ProductCard"
+import ProductItem from "../Components/ProductItem"
 import { getAllProducts } from '../fetches'
+import "../styles/products.css"
 
 export const Products = () => {
 
@@ -13,13 +14,22 @@ export const Products = () => {
 
   return (
     <div>
-      <h1>Testano</h1>
-      {!Products && <p> loading...</p>}
-      {Products && Object.entries(Products).map(item => {
-        const key = item[0]
-        const value = item[1]
-        return <ProductCard key={key} product={value} />
-      })}
+      <h1>Products</h1>
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Price</th>
+          <th>description</th>
+          <th>Update</th>
+          <th>Remove</th>
+        </tr>
+        {!Products && <p> loading...</p>}
+        {Products && Object.entries(Products).map(item => {
+          const key = item[0]
+          const value = item[1]
+          return <ProductItem key={key} product={value} />
+        })}
+      </table>
     </div>
   )
 }
