@@ -10,6 +10,17 @@ exports.getAllProducts = async (req, res) => {
   }
 }
 
+exports.getSingleProduct = async (req, res) => {
+  try {
+    const id = req.params.id
+    const singelProduct = await Product.findById(id)
+    res.status(200).json(singelProduct)
+  } catch (error) {
+    console.error(error)
+    res.status(500).send
+  }
+}
+
 exports.addProduct = async (req, res) => {
   try {
     const product = await Product.create({
