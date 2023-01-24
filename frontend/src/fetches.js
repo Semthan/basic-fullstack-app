@@ -6,3 +6,4 @@ const url = axios.create({
 })
 
 export const getAllProducts = () => url.get('/product')
+export const deleteProduct = (id) => url.delete(`/product/${id}`)
