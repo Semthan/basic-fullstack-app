@@ -15,7 +15,7 @@ exports.addProduct = async (req, res) => {
     const product = await Product.create({
       title: req.body.title,
       price: req.body.price,
-      describtion: req.body.describtion,
+      description: req.body.description,
     })
     res.status(200).json(product)
   } catch (error) {
