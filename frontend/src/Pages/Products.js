@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ProductItem from "../Components/ProductItem"
+import NewProductForm from '../Components/NewProductForm'
 import { getAllProducts } from '../fetches'
 import "../styles/products.css"
 
@@ -15,6 +16,10 @@ export const Products = () => {
   return (
     <div>
       <h1>Products</h1>
+
+      <h3>Add new product</h3>
+
+      <NewProductForm />
       <table>
         <tr>
           <th>Title</th>

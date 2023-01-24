@@ -1,4 +1,3 @@
-import React from 'react'
 import "../styles/products.css"
 import {deleteProduct} from '../fetches'
 
