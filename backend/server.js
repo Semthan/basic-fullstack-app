@@ -16,6 +16,14 @@ connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
 
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+app.get('*', (req, res) =>
+  res.sendFile(
+    path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
+  )
+);
+
 /* app.use(
   cors({
     origin: ['http://localhost:3000',],
