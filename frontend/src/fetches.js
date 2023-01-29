@@ -2,11 +2,11 @@ import axios from 'axios'
 
 
 const url = axios.create({
-  baseURL: '/product'
+  baseURL: 'https://basic-mern-app.onrender.com'
 })
 
-export const getAllProducts = () => url.get('')
-export const getSingleProduct = (id) => url.get(`/${id}`)
-export const addProduct = (payload) => url.post('', payload)
-export const updateProduct = (payload, id) => url.put(`/${id}`, payload)
-export const deleteProduct = (id) => url.delete(`/${id}`)
+export const getAllProducts = () => url.get('/product')
+export const getSingleProduct = (id) => url.get(`/product${id}`)
+export const addProduct = (payload) => url.post('/product', payload)
+export const updateProduct = (payload, id) => url.put(`/product${id}`, payload)
+export const deleteProduct = (id) => url.delete(`/product${id}`)

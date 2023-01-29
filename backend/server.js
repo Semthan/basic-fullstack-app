@@ -25,12 +25,12 @@ app.get('*', (req, res) =>
   )
 );
 
-/* app.use(
+app.use(
   cors({
-    origin: ['http://localhost:3000',],
+    origin: ['http://localhost:3000', 'https://basic-mern-app.onrender.com'],
     credentials: true,
   }),
-); */
+);
 
 //first lets try with this
 app.use(cors())
