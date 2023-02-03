@@ -18,7 +18,7 @@ connection.once('open', () => {
 
 app.use(
   cors({
-    origin: ['http://localhost:3000',],
+    origin: ['https://basic-mern-app-vbzv.onrender.com'],
     credentials: true,
   }),
 );
