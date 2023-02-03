@@ -21,19 +21,21 @@ export const Products = () => {
 
       <NewProductForm />
       <table>
-        <tr>
-          <th>Title</th>
-          <th>Price</th>
-          <th>description</th>
-          <th>Update</th>
-          <th>Remove</th>
-        </tr>
-        {!Products && <p> loading...</p>}
-        {Products && Object.entries(Products).map(item => {
-          const key = item[0]
-          const value = item[1]
-          return <ProductItem key={key} product={value} />
-        })}
+        <tbody>
+          <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>description</th>
+            <th>Update</th>
+            <th>Remove</th>
+          </tr>
+          {!Products && <p> loading...</p>}
+          {Products && Object.entries(Products).map(item => {
+            const key = item[0]
+            const value = item[1]
+            return <ProductItem key={key} product={value} />
+          })}
+        </tbody>
       </table>
     </div>
   )
