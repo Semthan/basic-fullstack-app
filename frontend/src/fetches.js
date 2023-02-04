@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 const url = axios.create({
-  baseURL: 'basic-mern-app-api.up.railway.app'
+  baseURL: 'https://basic-mern-app-api.up.railway.app/'
 })
 
 export const getAllProducts = () => url.get('/api')
