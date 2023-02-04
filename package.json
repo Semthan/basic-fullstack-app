@@ -1,0 +1,20 @@
+{
+  "name": "basic-mern-app",
+  "version": "1.0.0",
+  "description": "basic fullstack web app using the mern stack",
+  "main": "backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd backend && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Semthan/basic-fullstack-app.git"
+  },
+  "author": "Semthan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Semthan/basic-fullstack-app/issues"
+  },
+  "homepage": "https://github.com/Semthan/basic-fullstack-app#readme"
+}
