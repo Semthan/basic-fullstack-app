@@ -10,7 +10,7 @@ export const Products = () => {
 
   useEffect(() => {
     getAllProducts().then((res) => setProducts(res.data))
-  })
+  }, [])
 
 
   return (
